@@ -1,0 +1,17 @@
+T[shop, 2000, sname int, slocation int, stype int, srecord int]
+T[usera, 8000, uname int, ulocation int, utype int, urecord int]
+
+C[1, usera.ulocation-shop.slocation, <=, 400]
+C[2, usera.utype-shop.stype, =, 600]
+C[3, usera.urecord-shop.srecord, =, 800]
+C[4, usera.ulocation, >, 500]
+C[5, usera.utype, >, 1000]
+C[6, shop.stype, <, 1500]
+C[7, usera.urecord, >, 2000]
+C[8, shop.srecord, <, 2500]
+
+R[7, 3]
+R[8, 3]
+R[5, 2]
+R[6, 2]
+R[4, 1]

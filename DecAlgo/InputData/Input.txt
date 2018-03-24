@@ -1,0 +1,12 @@
+T[lineitem, 4500121, lextendedprice int, llinenumber int, ldiscount int, ltax int, lpartkey int, lorderkey int, lshipdate int, lsuppkey int, lquantity int, lreturnflag int, llinestatus int, lcommitdate int, lreceiptdate int, lshipinstruct int, lshipmode int, lcomment int]
+
+C[1, lineitem.lshipdate, <=, 595689]
+C[2, lineitem.lshipdate, >=, 433614]
+C[3, lineitem.lshipdate, <, 90945]
+C[4, lineitem.ldiscount, <, 381909]
+C[5, lineitem.ldiscount, >, 342708]
+C[6, lineitem.lquantity, <, 332637]
+
+R[2, 3]
+R[4, 6]
+R[5, 6]
